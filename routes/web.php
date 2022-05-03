@@ -16,6 +16,16 @@ use App\Http\Controllers\PostsController;
 
 Route::get('/', function () {
     return view('welcome');
+})->name('home');
+
+Route::get('/endpoint', function () {
+
+    return to_route('home');
+
+    // return redirect()->route('home');
+
+    // both are functionally identicall
+    
 });
 
 
