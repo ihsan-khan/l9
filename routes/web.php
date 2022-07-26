@@ -3,6 +3,8 @@
 use App\Models\User;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostsController;
+use App\Http\Controllers\BlogController;
+use App\Http\Controllers\NewsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -37,4 +39,17 @@ Route::controller(PostsController::class)->group(function () {
     Route::get('/posts/{post}', 'show');
     Route::post('/posts', 'store');
 });
+
+Route::controller(BlogController::class)->group(function () {
+    Route::get('blog', 'index');
+    Route::get('blog/{blog}', 'show');
+    Route::post('blog/store', 'store');
+});
+
+Route::controller(NewsController::class)->group(function () {
+    Route::get('news', 'index');
+    Route::get('news/{news}', 'show');
+    Route::post('news/store', 'store');
+});
+
 

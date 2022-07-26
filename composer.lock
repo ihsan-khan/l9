@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "12524947d8c752f84bc21aaaede06bfa",
+    "content-hash": "74d8d4e86052948b9f07c79469d7cc8f",
     "packages": [
         {
             "name": "brick/math",
@@ -436,6 +436,71 @@
                 }
             ],
             "time": "2021-10-11T09:18:27+00:00"
+        },
+        {
+            "name": "fouladgar/laravel-mobile-verification",
+            "version": "v3.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mohammad-fouladgar/laravel-mobile-verification.git",
+                "reference": "a9c1b8a724959274f052ebc8b8900f8c4f9bf134"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mohammad-fouladgar/laravel-mobile-verification/zipball/a9c1b8a724959274f052ebc8b8900f8c4f9bf134",
+                "reference": "a9c1b8a724959274f052ebc8b8900f8c4f9bf134",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/database": "^9.0",
+                "illuminate/notifications": "^9.0.2",
+                "illuminate/support": "^9.0",
+                "php": "^8.0"
+            },
+            "require-dev": {
+                "mockery/mockery": "^1.4",
+                "orchestra/testbench": "^7.0",
+                "php-coveralls/php-coveralls": "^2.1",
+                "phpunit/phpunit": "^9.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Fouladgar\\MobileVerification\\ServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Fouladgar\\MobileVerification\\": "src/",
+                    "Fouladgar\\MobileVerification\\Database\\Factories\\": "database/factories"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Mohammad Fouladgar",
+                    "email": "fouladgar.dev@gmail.com",
+                    "role": "Developer"
+                }
+            ],
+            "keywords": [
+                "laravel",
+                "laravel-mobile-verification",
+                "lumen",
+                "mobile",
+                "mobile-verification",
+                "mobile-verifier"
+            ],
+            "support": {
+                "issues": "https://github.com/mohammad-fouladgar/laravel-mobile-verification/issues",
+                "source": "https://github.com/mohammad-fouladgar/laravel-mobile-verification"
+            },
+            "time": "2022-02-15T14:27:09+00:00"
         },
         {
             "name": "fruitcake/php-cors",
@@ -7741,5 +7806,5 @@
         "php": "^8.0.2"
     },
     "platform-dev": [],
-    "plugin-api-version": "2.0.0"
+    "plugin-api-version": "2.2.0"
 }

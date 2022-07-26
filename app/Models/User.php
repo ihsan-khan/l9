@@ -7,10 +7,12 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
+use Fouladgar\MobileVerification\Contracts\MustVerifyMobile as IMustVerifyMobile;
+use Fouladgar\MobileVerification\Concerns\MustVerifyMobile;
 
-class User extends Authenticatable
+class User extends Authenticatable implements IMustVerifyMobile
 {
-    use HasApiTokens, HasFactory, Notifiable;
+    use HasApiTokens, HasFactory, Notifiable, MustVerifyMobile;
 
     /**
      * The attributes that are mass assignable.
